@@ -6,10 +6,10 @@ class ThiSinh():
         self.mon2 = mon2
         self.mon3 = mon3
         self.tongdiem = mon1 + mon2 + mon3
-    
+
     def printf(self):
         print(self.name, self.date, '{:.1f}'.format(self.tongdiem))
-    
+
 
 name = input()
 date = input()

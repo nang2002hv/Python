@@ -1,14 +1,15 @@
-
 from decimal import ROUND_HALF_UP, Decimal
 
 
 class hoadon():
-    def __init__(self, ma, name, tiendien) :
+    def __init__(self, ma, name, tiendien):
         self.ma = ma
         self.name = name
         self.tiendien = tiendien
+
     def total(self):
         print(self.ma, self.name, self.tiendien)
+
 
 n = int(input())
 L = []
@@ -39,16 +40,15 @@ for i in range(n):
     else:
         tiendien += 150 * 50
         sodien -= 50
-    
+
     tiendien += sodien * 200
     tiendien *= tmp
     tiendien = Decimal(tiendien) / Decimal(100)
     tiendien = tiendien.quantize(Decimal('1'), ROUND_HALF_UP)
-    
-    L.append(hoadon('KH{:02d}'.format(dem), name, tiendien))
-    
 
-L = sorted(L, key = lambda x : -x.tiendien)
+    L.append(hoadon('KH{:02d}'.format(dem), name, tiendien))
+
+L = sorted(L, key=lambda x: -x.tiendien)
 
 for i in L:
     i.total()

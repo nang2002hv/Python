@@ -14,14 +14,14 @@ for i in range(n):
         (dic[name])[0] += ed - st
         (dic[name])[1] += mua
     except:
-        dic.update({name : [0, 0]})
+        dic.update({name: [0, 0]})
         (dic[name])[0] += ed - st
         (dic[name])[1] += mua
 
 dem = 0
 for key, value in dic.items():
     dem += 1
-    print('T{:02d}'.format(dem), key, '{:.2f}'.format(value[1]*60/ value[0]))
+    print('T{:02d}'.format(dem), key, '{:.2f}'.format(value[1] * 60 / value[0]))
 
 '''
 10

@@ -1,11 +1,13 @@
 from decimal import ROUND_HALF_UP, Decimal
 from fractions import Fraction
 
+
 class HS():
     def __init__(self, ma, name, diem):
         self.ma = ma
         self.name = name
         self.diem = diem
+
     def phanloai(self):
         if self.diem >= 9.0:
             self.loai = 'XUAT SAC'
@@ -17,10 +19,12 @@ class HS():
             self.loai = 'TB'
         else:
             self.loai = 'YEU'
-    
+
     def total(self):
         self.phanloai()
         print(self.ma, self.name, self.diem, self.loai)
+
+
 n = int(input())
 L = []
 dem = 0
@@ -36,7 +40,7 @@ for i in range(n):
     id = 'HS{:02d}'.format(dem)
     L.append(HS(id, name, diem))
 
-l = sorted(L, key= lambda x : (- x.diem, x.ma))
+l = sorted(L, key=lambda x: (- x.diem, x.ma))
 for hs in l:
     hs.total()
 

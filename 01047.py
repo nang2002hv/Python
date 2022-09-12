@@ -1,20 +1,17 @@
 import math
 
 
-def nt(n):
+def nguyento(n):
+    if n < 2: return False
     for i in range(2, int(math.sqrt(n)) + 1):
         if n % i == 0: return False
-    return n > 1
+    return True
 
 
-# main
 t = int(input())
 while t > 0:
-    n = input()
-    s = 0
-    for i in n:
-        s += int(i)
-    if (nt(s)):
+    s = input();
+    if nguyento(int(s[-4::])):
         print("YES")
     else:
         print("NO")

@@ -1,6 +1,7 @@
 import math
 from decimal import Decimal
 
+
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -9,8 +10,9 @@ class Point:
     def distance(self, p2):
         width = abs(self.x - p2.x)
         height = abs(self.y - p2.y)
-        res = math.sqrt(width**2 + height**2)
+        res = math.sqrt(width ** 2 + height ** 2)
         return "{:.4f}".format(res)
+
 
 if __name__ == '__main__':
     t = int(input())

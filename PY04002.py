@@ -21,4 +21,3 @@ if int(arr[0]) > 0 and int(arr[1]) > 0:
     print("{} {} {}".format(r.perimeter(), r.area(), r.color()))
 else:
     print("INVALID")
-

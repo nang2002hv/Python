@@ -1,10 +1,10 @@
 def solve():
-    a,b,c,d = map(int, input().split())
+    a, b, c, d = map(int, input().split())
     A = complex(a, b)
     B = complex(c, d)
     C = (A + B) * A
-    D = (A + B)**2
-    
+    D = (A + B) ** 2
+
     a = int(C.real)
     b = int(C.imag)
     ans = ''
@@ -13,7 +13,7 @@ def solve():
     else:
         ans = str(a) + ' + ' + str(b) + 'i'
     ans = ans + ', '
-    print(ans, end = '')
+    print(ans, end='')
 
     a = int(D.real)
     b = int(D.imag)
@@ -22,6 +22,7 @@ def solve():
     else:
         ans = str(a) + ' + ' + str(b) + 'i'
     print(ans)
+
 
 T = int(input())
 while T > 0:
